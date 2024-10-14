@@ -1,0 +1,24 @@
+
+<main>
+ <button><h1>HOLA</h1></button>
+     <div class="grid">
+         <div class="pokemon-card" *ngFor="let pokemon of pokemons">
+                 <div class="pokemon-img">
+                     <img [src]="pokemon.sprite" [alt]="pokemon.name" class="pokemon-sprite" />
+                </div>
+                <div class="pokemon-details">
+                    <p style="margin-top:0;">#{{ pokemon.id }}</p>
+                    <h3 style="margin: 0;">{{pokemon.name}}</h3>
+                    <div style="display: flex; width: 100%;">
+                        <div *ngFor="let type of pokemon.types" style="margin-right: 5px; ">
+                            <p style="padding: 3px; border-radius: 2px;  width:100%; box-sizing: border-box;" [ngClass]="'type-' + type.type.name">{{ type.type.name }}</p>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+
+        
+    <button (click)="showMore()">Show More</button>
+    </div>  
+
+</main>

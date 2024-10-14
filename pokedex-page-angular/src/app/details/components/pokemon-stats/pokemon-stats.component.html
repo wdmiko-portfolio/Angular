@@ -1,0 +1,34 @@
+<main>
+    
+    <div class="content">
+
+        <div class="details">
+
+            <div class="column-details-1" >
+               
+                <div class="pokemon-img"> 
+                    <img [src]="pokemonDetails.sprite" [alt]="pokemonDetails.name" class="pokemon-sprite" />
+                </div>
+             
+                <div style="background-color: rgb(38, 89, 133);">
+                    <h4>Stats</h4>
+                    <p *ngFor="let stat of pokemonDetails.stats">{{stat.stat.name}}: {{stat.base_stat}}</p>
+                </div>
+            </div>
+            <div class="column-details-2">
+                <div>
+                    <h3>Type</h3>
+                    <div *ngFor="let type of pokemonDetails.types" style="margin-right: 5px; ">
+                        <p style="padding: 3px; border-radius: 2px;  width:100%; box-sizing: border-box;" [ngClass]="'type-' + type.type.name">{{ type.type.name }}</p>
+                    </div>
+                </div>
+                <div><h3>Weakness</h3></div>
+            </div>
+        </div>
+        <div class="evolution-stats">
+            
+        </div>
+
+    </div>
+
+</main>

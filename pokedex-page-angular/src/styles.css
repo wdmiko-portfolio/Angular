@@ -1,0 +1,87 @@
+:root {
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --header-height: 300px; /* Definimos la variable de altura del header */
+  --color-grass: #78C850;
+  --color-poison: #A040A0;
+  --color-fire: #F08030;
+  --color-water: #6890F0;
+  --color-bug: #A8B820;
+  --color-normal: #A8A878;
+  --color-electric: #F8D030;
+  --color-ground: #E0C068;
+  --color-fairy: #EE99AC;
+  --color-fighting: #C03028;
+  --color-psychic: #F85888;
+  --color-rock: #B8A038;
+  --color-ghost: #705898;
+  --color-ice: #98D8D8;
+  --color-dragon: #7038F8;
+  --color-dark: #705848;
+  --color-steel: #B8B8D0;
+  --color-flying: #A890F0;
+}
+
+
+/* COLORS */
+.type-grass { background-color: var(--color-grass); }
+.type-poison { background-color: var(--color-poison); }
+.type-fire { background-color: var(--color-fire); }
+.type-water { background-color: var(--color-water); }
+.type-bug { background-color: var(--color-bug); }
+.type-normal { background-color: var(--color-normal); }
+.type-electric { background-color: var(--color-electric); }
+.type-ground { background-color: var(--color-ground); }
+.type-fairy { background-color: var(--color-fairy); }
+.type-fighting { background-color: var(--color-fighting); }
+.type-psychic { background-color: var(--color-psychic); }
+.type-rock { background-color: var(--color-rock); }
+.type-ghost { background-color: var(--color-ghost); }
+.type-ice { background-color: var(--color-ice); }
+.type-dragon { background-color: var(--color-dragon); }
+.type-dark { background-color: var(--color-dark); }
+.type-steel { background-color: var(--color-steel); }
+.type-flying { background-color: var(--color-flying); }
+
+
+ 
+
+
+body {  
+  margin: auto;
+  display: flex;
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 0; /* Evita que los elementos se desborden por un ancho mínimo */
+  height: 100vh;
+  justify-content: center; /* Centra horizontalmente el componente main */
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  background-image: url(assets/img/fondo-blanco.jpg);
+  background-size:contain;
+  background-position: center;
+  background-repeat:repeat
+}
+
+  h1 {
+    font-size: 3.125rem;
+    color: #363636d3 ;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+  
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #000;
+  }

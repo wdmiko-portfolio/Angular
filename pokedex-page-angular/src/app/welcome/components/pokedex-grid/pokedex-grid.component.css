@@ -1,0 +1,86 @@
+main {
+  display: flex;
+  padding-top: 80px;
+  margin: auto;
+  width: 70vw;
+  max-width: 100vw;
+  min-width: 0;
+  flex-direction: column;
+  height: auto;
+  align-items: center; /* Centra el contenido del main horizontalmente */
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow-x: hidden;
+
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  height: 100%; /* Toma todo el espacio disponible en el main */
+  overflow-x: hidden;
+  max-width: 80%;
+  min-width: 0; /* Evita que los elementos se desborden por un ancho mínimo */
+}
+.pokemon-details{
+  margin-left: 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+.pokemon-card {
+  flex: calc(25% - 10px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+  .pokemon-img{
+    background-color: #dadada; /* Color de fondo para los ítems */
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pokemon-sprite {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  .pokemon-sprite:hover{
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    transition: transform 0.05s ease-in;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+
+  
+@media screen and (max-width: 650px) {
+  main{
+    box-sizing: border-box;
+    width: 100vh;
+    margin: 0; /* Elimina cualquier margen del cuerpo para evitar desplazamiento */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */    width:100vw;
+  }
+
+  p{
+    font-size: 0.8rem;
+  }
+}
