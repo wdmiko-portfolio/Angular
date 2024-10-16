@@ -6,6 +6,7 @@ import { PokemonService } from '../../../z-services/pokemon.service';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 interface Pokemon{
   id:number;
   name: string;
@@ -17,7 +18,7 @@ interface Pokemon{
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule, NgxSpinnerModule, CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -27,12 +28,11 @@ export class HeaderComponent {
   pokemonDetailsSignal: Signal<any> = signal<any>(null);
   
 
-  constructor(private spinner: NgxSpinnerService,private pokemonApi: PokemonApiService, private route: Router,private pokemonService:PokemonService ){
+  constructor(private pokemonApi: PokemonApiService, private route: Router,private pokemonService:PokemonService ){
 
   }   
 
  async  catchPokemon(){
-   await this.spinner.show();
 this.pokemonApi.getPokemonDetails(this.pokemon).subscribe((details: any) => {
 
       this.pokemonDetails = {

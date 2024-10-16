@@ -6,13 +6,13 @@ import { PokemonApiService } from '../../z-services/pokemon-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @Component({
   selector: 'app-details',
   standalone:true,
-  imports:[PokemonStatsComponent, HeaderDetailsComponent, NgxSpinnerModule,CommonModule],
+  imports:[PokemonStatsComponent, HeaderDetailsComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
@@ -23,7 +23,7 @@ export class DetailsComponent {
   evolData:any;
   passDataEvolDetails:any;
 
-  constructor(private spinner: NgxSpinnerService ,private route: ActivatedRoute, private pokemonService: PokemonService, private pokemonApi:PokemonApiService){}
+  constructor(private route: ActivatedRoute, private pokemonService: PokemonService, private pokemonApi:PokemonApiService){}
 
   ngOnInit() {
     this.pokemonService.loadPokemonDetails(); // Cargar desde localStorage si existe
