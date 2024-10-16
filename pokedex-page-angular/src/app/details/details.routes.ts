@@ -4,8 +4,8 @@ import { DetailsComponent } from "./pages/details.component";
 
 export const routes: Routes = [
     {
-        path:'',
-        component:DetailsComponent
-    }
+        path: ':id',  // Acepta el parámetro dinámico id
+        component: DetailsComponent
+      }
 ];
 

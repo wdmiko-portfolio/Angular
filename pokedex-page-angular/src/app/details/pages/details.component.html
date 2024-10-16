@@ -1,2 +1,11 @@
 <app-header-details [pokemonDetails]="receivedPokemon"></app-header-details>
-<app-pokemon-stats  [pokemonDetails]="receivedPokemon"></app-pokemon-stats>
+<app-pokemon-stats [evolDetails]="passDataEvolDetails" [pokemonDetails]="receivedPokemon"></app-pokemon-stats>
+
+<ngx-spinner
+  bdColor="rgba(255,255,255,1)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>

@@ -6,8 +6,8 @@
 
             <div class="column-details-1" >
                
-                <div class="pokemon-img"> 
-                    <img [src]="pokemonDetails.sprite" [alt]="pokemonDetails.name" class="pokemon-sprite" />
+                <div class="pokemon-img" style="width: 50%;"> 
+                    <img style="width: 100%;" [src]="pokemonDetails.sprite" [alt]="pokemonDetails.name" class="pokemon-sprite" />
                 </div>
              
                 <div style="background-color: rgb(38, 89, 133);">
@@ -25,10 +25,30 @@
                 <div><h3>Weakness</h3></div>
             </div>
         </div>
-        <div class="evolution-stats">
-            
+
+<!-- EVOLUCION CHAINS -->
+        <div  class="evolution-stats">          
+              <!-- Contenedor de la imagen de la evolución -->
+              <div style="width: 100%; margin: 50px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+                <ng-container *ngFor="let evol of evolutions; let i = index">
+              
+                  <!-- Contenedor de la imagen de la evolución -->
+                    <div style="aspect-ratio: 1; border-radius: 50%; border-color: rgb(255, 255, 255); border-width: 10px; border-style: solid; display: flex; justify-content: center; align-items: center; width: 150px;">
+                        <img style="height: 80%; width: 80%; object-fit: contain; box-sizing: border-box;" [src]="evol.sprites.other.showdown.front_default" [alt]="evol.name" />
+                    </div>
+              
+                  <!-- Flecha entre los elementos (si no es el último) -->
+                    <div *ngIf="i < evolDetails.length - 1" style="display: flex; align-items: center; justify-content: center; width: 50px;">
+                        <svg style="color: aliceblue;" xmlns="http://www.w3.org/2000/svg" height="5rem" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
+              
+                </ng-container>
+              </div>
+              
         </div>
-
     </div>
-
 </main>
+<ng-template #noMoreEvols>
+</ng-template>

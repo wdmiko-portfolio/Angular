@@ -7,16 +7,26 @@ import { Observable } from 'rxjs';
 })
 export class PokemonApiService {
 
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
+  private apiUrl = 'https://pokeapi.co/api/v2';
 
   constructor(private http: HttpClient) { }
 
   getPokemons(limit: number, offset: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}?limit=${limit}&offset=${offset}`);
+    return this.http.get(`${this.apiUrl}/pokemon?limit=${limit}&offset=${offset}`);
   }
 
   getPokemonDetails(name: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${name}`);
+    return this.http.get(`${this.apiUrl}/pokemon/${name}`);
   }
 
+  getPokemonEvolutions(id_pokemon:any): Observable <any>{
+   
+  return this.http.get(`${this.apiUrl}/pokemon-species/${id_pokemon}/`)
+  
+  }
+
+  getchainEvol(urls:string) : Observable <any> {
+    return this.http.get(urls);
+
+  }
 }

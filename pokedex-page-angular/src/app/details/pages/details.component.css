@@ -1,0 +1,12 @@
+.custom-spinner {
+    background-image: radial-gradient(circle, #fb6887, #fe5874, #ff4860, #fd3649, #fa2331, #fb2f32, #fb3934, #fc4135, #ff5c52, #ff736d, #ff8987, #ff9f9f);
+    height: 100%;  /* Ajusta según tus necesidades */
+    width: 100%;   /* Ajusta según tus necesidades */
+    position: absolute; /* Para cubrir el área del spinner */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté encima */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
